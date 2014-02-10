@@ -1,0 +1,86 @@
+.hidden {
+  display: none; }
+
+.deck-container .box-shadow-example {
+  background-color: #62707d;
+  border: 2px solid black;
+  box-shadow: black 5px 5px 15px;
+  -moz-box-shadow: black 5px 5px 15px;
+  -webkit-box-shadow: black 5px 5px 15px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px; }
+.deck-container .gradients-example {
+  background: #62707d;
+  /* fall-back for old browsers */
+  background: linear-gradient(top, #62707d 0%, #2f3a43 100%);
+  /* W3C */
+  background: -moz-linear-gradient(top, #62707d 0%, #2f3a43 100%);
+  /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #62707d 0%, #2f3a43 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -ms-linear-gradient(top, #62707d 0%, #2f3a43 100%);
+  /* IE10+ */
+  border: 2px solid black;
+  box-shadow: black 5px 5px 15px;
+  -moz-box-shadow: black 5px 5px 15px;
+  -webkit-box-shadow: black 5px 5px 15px;
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px; }
+
+.deck-container .simple-button {
+  background: #7bbf81;
+  /* fall-back for old browsers */
+  background: linear-gradient(top, #7bbf81 0%, #0f9a1b 100%);
+  /* W3C */
+  background: -moz-linear-gradient(top, #7bbf81 0%, #0f9a1b 100%);
+  /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #7bbf81 0%, #0f9a1b 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -ms-linear-gradient(top, #7bbf81 0%, #0f9a1b 100%);
+  /* IE10+ */
+  border: 2px solid black;
+  box-shadow: black 5px 5px 15px;
+  -moz-box-shadow: black 5px 5px 15px;
+  -webkit-box-shadow: black 5px 5px 15px;
+  border-radius: 10px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  width: 100px; }
+  .deck-container .simple-button:hover {
+    background: #59ae60;
+    /* fall-back for old browsers */
+    background: linear-gradient(top, #59ae60 0%, #0a6c13 100%);
+    /* W3C */
+    background: -moz-linear-gradient(top, #59ae60 0%, #0a6c13 100%);
+    /* FF3.6+ */
+    background: -webkit-linear-gradient(top, #59ae60 0%, #0a6c13 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #59ae60 0%, #0a6c13 100%);
+    /* IE10+ */ }
+  .deck-container .simple-button:active {
+    background: #9dd0a2;
+    /* fall-back for old browsers */
+    background: linear-gradient(top, #9dd0a2 0%, #14c823 100%);
+    /* W3C */
+    background: -moz-linear-gradient(top, #9dd0a2 0%, #14c823 100%);
+    /* FF3.6+ */
+    background: -webkit-linear-gradient(top, #9dd0a2 0%, #14c823 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #9dd0a2 0%, #14c823 100%);
+    /* IE10+ */ }
+
+.deck-container .double-rainbow {
+  border: 1px solid #909090;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  width: 600px; }

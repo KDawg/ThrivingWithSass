@@ -1,0 +1,80 @@
+
+$border-edge-color: #c7c7c7;
+$shadow-color: #909090;
+
+$dark-bar-top-color: #344047;
+$dark-bar-bottom-color: #232D33;
+
+$light-bar-top-color: #536470;
+$light-bar-bottom-color: #3A4951;
+
+
+// @SEE: "Ultimate CSS Gradient Generator", http://www.colorzilla.com/gradient-editor/
+
+@mixin backgroundGradientMiddleStop($topColor, $topMidColor, $botMidColor, $botColor) {
+    background: $topMidColor; /* fall-back for old browsers */
+    background: linear-gradient(top, $topColor 0%, $topMidColor 50%, $botMidColor 51%, $botColor 100%); /* W3C */
+
+    background: -moz-linear-gradient(top, $topColor 0%, $topMidColor 50%, $botMidColor 51%, $botColor 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(top, $topColor 0%, $topMidColor 50%, $botMidColor 51%, $botColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, $topColor 0%, $topMidColor 50%, $botMidColor 51%, $botColor 100%); /* IE10+ */
+}
+
+
+@mixin backgroundGradientLinear($topColor, $bottomColor) {
+    background: $topColor; /* fall-back for old browsers */
+    background: linear-gradient(top,  $topColor 0%, $bottomColor 100%); /* W3C */
+
+    background: -moz-linear-gradient(top, $topColor 0%, $bottomColor 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(top, $topColor 0%, $bottomColor 100%); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, $topColor 0%, $bottomColor 100%); /* IE10+ */
+}
+
+
+@mixin backgroundGradient4Stops($clr1, $perc1, $clr2, $perc2, $clr3, $perc3, $clr4, $perc4) {
+	background: $clr1; /* Old browsers */
+	background: linear-gradient(top,  $clr1 $perc1, $clr2 $perc2, $clr3 $perc3, $clr4 $perc4); /* W3C */
+
+	background: -moz-linear-gradient(top, $clr1 $perc1, $clr2 $perc2, $clr3 $perc3, $clr4 $perc4); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, $clr1 $perc1,$clr2 $perc2,$clr3 $perc3,$clr4 $perc4); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $clr1 $perc1,$clr2 $perc2,$clr3 $perc3,$clr4 $perc4); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $clr1 $perc1,$clr2 $perc2,$clr3 $perc3,$clr4 $perc4); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$clr1', endColorstr='$clr4',GradientType=0); /* IE6-9 */
+}
+
+
+@mixin borderRadius($radius) {
+    border-radius: $radius;
+
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+
+@mixin boxShadow($arguments) {
+    box-shadow: $arguments;
+
+    -moz-box-shadow: $arguments;
+    -webkit-box-shadow: $arguments;
+}
+
+
+@mixin bubblePanel() {
+    background: $panel-background-color;
+    border: 5px solid white;
+
+    @include borderRadius(15px);
+    @include boxShadow(black 2px 2px 15px);
+
+    padding: 10px 10px 10px 10px;
+}
+
+
+@function fluidPercent($target-px, $context-px) {
+    @return percentage($target-px / $context-px);
+}
+
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+   <title>Surviving CSS By Thriving with SASS</title>
+
+   <meta name="description" content="An introduction to the Best Parts of SASS">
+   <meta name="author" content="Ken Tabor">
+   <meta name="viewport" content="width=1024, user-scalable=no">
+
+
+   <!-- Core and extension CSS files -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+   <link rel="stylesheet" href="./deck_js/core/deck.core.css">
+   <link rel="stylesheet" href="./deck_js/extensions/goto/deck.goto.css">
+   <link rel="stylesheet" href="./deck_js/extensions/menu/deck.menu.css">
+   <link rel="stylesheet" href="./deck_js/extensions/navigation/deck.navigation.css">
+   <link rel="stylesheet" href="./deck_js/extensions/status/deck.status.css">
+   <link rel="stylesheet" href="./deck_js/extensions/hash/deck.hash.css">
+
+   <!-- Style theme. More available in /themes/style/ or create your own. -->
+   <link rel="stylesheet" href="./deck_js/themes/style/web-2.0.css">
+
+   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+   <link rel="stylesheet" href="./deck_js/themes/transition/horizontal-slide.css">
+
+   <script src="./deck_js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+
+<!-- Begin slides -->
+<section class="slide" id="title-slide">
+   <h1>Surviving CSS by Thriving with SASS</h1>
+</section>
+
+
+<section class="slide" id="who-am-i">
+   <h2>Who Am I?</h2>
+   <ul>
+      <li>Ken, coder of mobile web apps</li>
+      <li>Member of Chito Manansala's MTX team</li>
+      <li>Now rolled up into John Samuel's Traveler Solutions Group building TripCase</li>
+   </ul>
+</section>
+
+
+<section class="slide" id="whatß-css">
+   <h2>What's CSS?</h2>
+   <ul>
+      <li>If HTML is the bones of a web page defining its structural layout</li>
+      <li>and Javascript is the brains logically responding to user input</li>
+      <li>then CSS is the skin and clothes showing how it appears rendered by our browsers</li>
+      <li>CSS = Cascading Style Sheets</li>
+   </ul>
+</section>
+
+
+<section class="slide" id="problems-css">
+   <h2>Problems with CSS</h2>
+   <ul>
+      <li>Graphic designers think it looks too much like programming, there are no built-in content creation tools</li>
+      <li>Programmers think it lacks any object-oriented structure promoting cut-and-paste spaghetti-code disasters</li>
+      <li>Scaling challenges in large projects</li>
+      <li>I can guess CSS was designed for laying out a single page document rather than an interactive application of any complexity</li>
+      <li>Doesn't encourage sharing best-practices/innovation across enterprise groups (modules/libraries etc.)</li>
+   </ul>
+</section>
+
+
+<section class="slide" id="what-sass">
+   <h2>Scoping Out SASS</h2>
+   <ul>
+      <li>It's a meta language extending CSS wrapping it up into a blanket of comfy organization</li>
+      <li>Simply copy your .css files to .scss</li>
+      <li>Add whatever level of "SASS"ness you like to your newly created .scss files</li>
+      <li>The SASS converter turns the .scss files into .css files that your web page uses</li>
+      <li>SASS = Syntactically Awesome Style Sheets</li>
+      <li>Incorporate new SASS concepts into your project as the team becomes confident</li>
+   </ul>
+</section>
+
+
+<section class="slide" id="best-parts">
+   <h2>SASS: The Best Parts</h2> <!-- Says me -->
+   <p>SASS has a ton of amazing features inherit to its language layout and held within its libraries</p>
+
+   <ul>
+        <li class="slide" id="best-parts-mixins">
+            <strong>Mixins</strong>: encapsulate commonly used CSS patterns into little reusable snippets
+        </li>
+
+        <li class="slide" id="best-parts-parameters">
+            <strong>Parameters</strong>: Pass variables into mixins and functions giving them infinite variety
+         </li>
+
+      <li class="slide" id="best-parts-vars">
+         <strong>Variables</strong>: Assign a named resource a color, or pixel size, then reference it; no hard-coding
+            <!-- hey, the design is locked down or else we wouldn't start development ... right -->
+      </li>
+
+      <li class="slide" id="best-parts-functions">
+         <strong>Functions</strong>: concise bundles of logic for use over and over
+      </li>
+
+      <li class="slide" id="best-parts-nesting">
+         <strong>Hierarchical Nesting</strong>: placing selectors "inside" selectors clearly shows relative ownership, inheritence, and specificity
+      </li>
+
+        <li class="slide" id="best-parts-color-math">
+            <strong>Color Math</strong>: Modify colors by adding, subtracting, multiplication
+        </li>
+
+        <li class="slide" id="best-parts-file-fragments">
+            <strong>File Fragments</strong>: break down big problems into smaller solutions, pulled in by a master using <code>"@import"</code> -> easier to manage and no extra http hits passed from server to client
+        </li>
+
+        <li class="slide" id="best-parts-comments">
+            <strong>Modern Comments</strong>: // I am a comment
+        </li>
+
+        <li class="slide" id="best-parts-logical conditions">
+            <strong>Logical Conditions</strong>: <code>@if, @for, @each, @while</code>
+        </li>
+
+   </ul>
+
+   <p class="slide" id="best-parts-more">I guarantee there's more awesomeness lurking in SASS. Check it out for yourself in their <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">documentation.</a></p>
+    <!-- How is it even possible? -->
+</section>
+
+
+<section class="slide" id="box-shadow">
+   <h2>Box Shadows Sure are Pretty</h2>
+    <div class="box-shadow-example"></div>
+    <ul>
+        <li class="slide" id="box-shadow-0"><p>Fantastico! And so easy too.</p>
+            <pre><code>box-shadow: black 2px 2px 15px;</code></pre>
+            <!-- That's pretty easy to write -->
+        </li>
+
+        <li class="slide" id="box-shadow-1">
+            Well, wait a minute, what's all of this then about "vendor prefixes?"
+            <pre><code>box-shadow: black 2px 2px 15px;
+-moz-box-shadow: black 2px 2px 15px;
+-webkit-box-shadow: black 2px 2px 15px;</code></pre>
+        </li>
+
+        <li class="slide" id="box-shadow-2">
+            Really? I've got to write that every time I want a drop-shadow? Well...
+        </li>
+        <!-- Well, I guess it could be worse... -->
+
+        <li class="slide" id="box-shadow-3">
+            It's gonna get worse...
+        </li>
+   </ul>
+</section>
+
+
+<section class="slide" id="gradients">
+   <h2>Gradients are Gorgeous</h2>
+    <div class="gradients-example"></div>
+   <p>I love me some CSS3 gradients, I can get all shiny on this web page</p>
+   <pre><code>background: linear-gradient(top, #42505D 0%, #2F3A43 100%);</code></pre>
+   <!-- That's pretty easy to code for such a powerful effect -->
+</section>
+
+
+<section class="slide" id="gradients2">
+   <h2>Gradients are Gorgeous</h2>
+   <div class="gradients-example"></div>
+   Ah, can't fool me, I remember Chrome and Firefox vendor prefixes
+   <pre><code><strong>background: -moz-linear-gradient(top, #42505D 0%, #2F3A43 100%);
+background: -webkit-linear-gradient(top, #42505D 0%, #2F3A43 100%);</strong>
+background: linear-gradient(top, #42505D 0%, #2F3A43 100%);</code></pre>
+
+</section>
+
+
+
+<section class="slide" id="gradients3">
+   <h2>Gradients are Gorgeous</h2>
+    <p>Maybe we ought to support Opera and Internet Explorer 10 as well?</p>
+    <pre><code>background: -moz-linear-gradient(top, #42505D 0%, #2F3A43 100%);
+background: -webkit-linear-gradient(top, #42505D 0%, #2F3A43 100%);
+<strong>
+background: -o-linear-gradient(top, #42505d 0%,#42505d 100%);
+background: -ms-linear-gradient(top, #42505d 0%,#42505d 100%);
+</strong>
+background: linear-gradient(top, #42505D 0%, #2F3A43 100%);</code></pre>
+</section>
+
+
+<section class="slide" id="gradients4">
+   <h2>Gradients are Gorgeous</h2>
+    <p>Don't forget IE 6-9, and a fallback for crazy old browsers...</p>
+    <pre><code><strong>background: #42505d;</strong>
+
+background: -moz-linear-gradient(top, #42505D 0%, #2F3A43 100%);
+background: -webkit-linear-gradient(top, #42505D 0%, #2F3A43 100%);
+
+background: -o-linear-gradient(top, #42505d 0%,#42505d 100%);
+background: -ms-linear-gradient(top, #42505d 0%,#42505d 100%);
+
+background: linear-gradient(top, #42505D 0%, #2F3A43 100%);
+<strong>filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr='#42505d', endColorstr='#42505d',GradientType=0 );</strong></code></pre>
+
+    <!-- That's pretty trickey, can't I just give you a Photoshop PSD? -->
+    <!-- oh wait, I'm a coder and I gotta make ths work - doh! -->
+    <p>There's got to be a better way</p>
+</section>
+
+
+<section class="slide" id="mixins">
+   <h2>Mixins</h2>
+   <p>Creating mixins tucks away the ugly details of beautiful styles defining reusable blocks of selector rules. DRY. Encapsulation! Joy!</p>
+
+  <pre><code><strong>@mixin</strong> backgroundGradientLinear() {
+  background: red
+  background: -moz-linear-gradient(top, red 0%, blue 100%);
+  background: -webkit-linear-gradient(top, red 0%, blue 100%);
+  background: -o-linear-gradient(top, red 0%, blue 100%);
+  background: -ms-linear-gradient(top, red 0%, blue 100%);
+  background: linear-gradient(top, red 0%, blue 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(
+    startColorstr='red', endColorstr='blue', GradientType=0 );
+}</code></pre>
+
+    <pre><code>.gradients-example {
+  <strong>@include backgroundGradientLinear();</strong>
+  border: 2px solid #000000;
+  box-shadow: #000000 5px 5px 15px;
+  -moz-box-shadow: #000000 5px 5px 15px;
+  -webkit-box-shadow: #000000 5px 5px 15px;
+  height: 100px;
+  width: 400px;
+}</code></pre>
+    <p>I sense hard-coding.</p> <!-- Doesn't stuff change -->
+</section>
+
+
+<section class="slide" id="params">
+   <h2>Parameters</h2>
+   <p>Parametric mixin definitions allow infinite variation.</p>
+    <!-- Reuse core mixin throughout your project. Share the best routines with other teams. -->
+
+    <pre><code><strong>@mixin</strong> backgroundGradientLinear($topColor, $bottomColor) {
+  background: $topColor
+  background: -moz-linear-gradient(top, $topColor 0%, $bottomColor 100%);
+  background: -webkit-linear-gradient(top, $topColor 0%, $bottomColor 100%);
+  background: -o-linear-gradient(top, $topColor 0%, $bottomColor 100%);
+  background: -ms-linear-gradient(top, $topColor 0%, $bottomColor 100%);
+  background: linear-gradient(top, $topColor 0%, $bottomColor 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr='$topColor', endColorstr='$bottomColor',
+    GradientType=0);
+}</code></pre>
+    <pre><code>@include <strong>backgroundGradientLinear(red, blue);</strong></code></pre>
+    <p>Crafted an excellent mixin? Document it! Share it! Have a coffee.</p> <!-- Coffee is for closers! -->
+</section>
+
+
+<section class="slide" id="vars">
+   <h2>Variables</h2>
+   <p>Hard-coding is generally bad form. Stuff changes. Choose a named resource, assign it a value, reference the resource.</p>
+   <p>Pick descriptive, self-documenting variable names. Favor shape/composition as naming inspiration rather than color.</p>
+   <pre><code>$panel-background-color-1: #62707D;
+$panel-background-color-2: #2F3A43;
+$frame-color: #101010;
+$shadow-color: #000020;</code></pre>
+
+</section>
+
+
+<section class="slide" id="refine-example">
+    <h2>Refining</h2>
+    <p>Leveraging what we know about variables and mixins, let's fine tune that previous "gradients" class selector.</p>
+    <pre><code>.gradients-example {
+  @include <strong>backgroundGradientLinear($panel-background-color-1,
+    $panel-background-color-2)</strong>;
+  border: 2px solid <strong>$frame-color</strong>;
+  @include <strong>boxShadow</strong>(<strong>$shadow-color</strong> 5px 5px 15px);
+  height: 100px;
+  width: 400px;
+ }</code></pre>
+    <p>Now that's some Professional Engineering &reg;.</p>
+</section>
+
+
+<section class="slide" id="functions">
+   <h2>Functions</h2>
+   <p>Functions look a lot like mixins, but return a single value used in the place it's called.</p>
+   <p>Example here takes two pixels values, divides them, and returns them as a percentage. I used it in the "fluid layout" examples you've seen.</p>
+   <code><pre>@function fluidPercent($target-px, $context-px) {
+  @return percentage($target-px / $context-px);
+}</pre></code>   
+   
+  <p>Calling this function might look like:</p>
+   <code><pre>.hotel-info-popup {
+  left: fluidPercent(75px, 960px);
+  padding: 0;
+  position: fixed;
+  top: fluidPercent(65px, 960px);
+  width: fluidPercent(795px, 960px);</pre></code>
+   
+</section>
+
+
+<section class="slide" id="nesting-1">
+   <h2>Nesting</h2>
+   <p>Cascading nature of CSS basically describes a useful hierarchical organization. Challenge is that it's verbose and unwieldy in practice even though specificity is valuable. With SASS nesting there's no need to type parent selector scopes over and over.</p>
+   <p>SASS markup on the right clearly shows hierarchy. It's beautiful.</p>
+
+   <div style="float:left;width:50%">
+   <pre><code>
+  .hotel-button {
+    border: 1px solid #999;
+    border-top-color: #A6A6A6;
+    color: white;
+    text-align: center; }
+
+  .hotel-button.accept {
+    background: #2caa37; }
+
+  .hotel-button.accept:hover {
+    background: #22812a; }
+
+  .hotel-button.accept:active {
+    background: #3ccd49; }
+
+  .hotel-button.small {
+    height: 20px;
+    width: 85px; }
+
+  .hotel-button.small p {
+    font-size: 12px;
+    padding-top: 4px; }
+
+  .hotel-button.large {
+    height: 45px;
+    width: 288px; }
+
+  .hotel-button.large p {
+    font-size: 21px;
+    padding-top: 6px; }
+   </code></pre>
+  </div>
+
+   <div style="float:left;width:50%">
+
+    <pre><code>
+  hotel-button {
+    border: 1px solid #999;
+    border-top-color: #A6A6A6;
+    color: white;
+    text-align: center;
+
+    &.accept {
+      background: #2caa37;
+      &:hover {
+        background: #22812a; }
+      &:active {
+        background: #3ccd49; }
+    }
+
+    &.small {
+      height: 20px;
+      width: 85px;
+
+      p {
+        font-size: 12px;
+        padding-top: 6px;
+      }
+    }
+
+    &.large {
+      height: 45px;
+      width: 288px;
+
+      p {
+        font-size: 21px;
+        padding-top: 2;
+      }
+    }
+  }</code></pre>
+  </div>
+
+</section>
+
+
+<section class="slide" id="color-math">
+    <h2>Color Math</h2>
+    <p>I concrete example using color math is making a shadow/tint of a base color for buttons.</p>
+    <pre><code>$accept-clr-top: #7bbf81;
+$accept-clr-bot: #0f9a1b;
+$color-shift: 10%;</code></pre>
+    <div class="simple-button"></div>
+    <pre><code>.simple-button {
+  @include backgroundGradientLinear($accept-clr-top, $accept-clr-bot);
+}
+
+.simple-button:hover {
+  @include backgroundGradientLinear(darken($accept-clr-top,
+    $color-shift), darken($accept-clr-top, $color-shift));
+}
+
+.simple-button:active {
+  @include backgroundGradientLinear(lighten($accept-clr-top,
+    $color-shift), lighten($accept-clr-top, $color-shift));
+}</code></pre>
+</section>
+
+
+<section class="slide" id="color-math-further">
+   <h2>Color Math Further</h2>
+   <p>SASS types and libraries support more color math.</p>
+   <ul>
+      <li>RGBA and HSL color spaces</li>
+      <li>hue, saturation, lightness, </li>
+      <li>adjust-hue, saturate, desaturate, grascale, invert, complement</li>
+      <li>opacify, transparentize, scale-color</li>
+   </ul>
+</section>
+
+
+
+<section class="slide" id="import">
+   <h2>@import</h2>
+   <ul>
+      <li>@import directive allows a style sheet to incorporate another one</li>
+      <li>CSS incurs additional http hits at run-time</li>
+      <li>SASS treats it as a pre-processor extension combining file fragments into a master container</li>
+   </ul>
+   <ul>
+      <li>Filenames starting with underscore are <strong>partials</strong> and SASS won't compile them into .css files</li>
+      <li>How to use them then? Choose a master file that includes those partials. For example "MyProject.scss" might begin:</li>
+      <pre><code>@import "reset";
+@import "buttons";
+@import "forms";</code></pre>
+   </ul>
+</section>
+
+
+<section class="slide" id="coder-install">
+   <h2>Installation: Programmers</h2>
+    <p>SASS is written in Ruby and bundled up for install. Assuming you have all that then this is easy:</p>
+   <code><pre>"gem install sass"</pre></code>
+    <p>Command-line compiler turns .scss into .css, and here's a helper macro to stick in your .profile.</p>
+    <code><pre>alias sass_my_project = 'cd ~/Dev/MyProject/assets; sass --watch ./sass:./css'</pre></code>
+    <p>Use it in an open terminal window. Moves to your resource directory, puts SASS compiler into "watch" mode. Assumes
+    project directories something like this:</p>
+    <!-- jumps to action when a .scss changes -->
+    <code><pre>/MyProject/app/views/*.*
+/MyProject/app/*.js
+/MyProject/assets/css
+/MyProject/assets/sass
+/MyProject/assets/image
+/MyProject/lib/*.js</pre></code>
+</section>
+
+<section class="slide" id="art-install">
+    <h2>Installation: Artists/Designers</h2>
+    <ul>
+        <li>"Scout" is a freebie and an all-in-one-bundle</li>
+        <li>mhs.github.com/scout-app/</li>
+        <li>Cross-platform running on OSX and MSWin</li> <!-- so that's kinda handy -->
+        <li>Handles all the gory Ruby technical details</li>
+        <li>GUI that watches your files, detects changes, automatically rebuilding as needed</li>
+    </ul>
+</section>
+
+<section class="slide" id="coder-install2">
+    <h2>Installation: Programmers Alternative</h2>
+    <ul>
+        <li>"Codekit" is possibly a hot new tool</li> <!-- certainly has Twitter buzz -->
+        <li>incident57.com/codekit</li>
+        <li>Free for now, but later with a commercial fee $??.??</li>
+        <li>An all-in-one-bundle, GUI file watcher</li>
+        <li>Also converts Stylus, CoffeeScript, Jade, Haml, error-checks & minifies J/S</li>
+        <li>OSX only, but worth a good look for folks like us</li>
+    </ul>
+</section>
+
+
+<section class="slide" id="further-reading">
+    <h2>Further Reading</h2>
+    <p>In the case of SASS, as with so many other great tools that we can mention, open wins. Because SASS is open-source there are lots of tuts, blogs, prez, etc.</p>
+    <p>As you have time go take a look on some on your favorite spots, but here are some starters:</p>
+    <ul>
+        <li>http://sass-lang.com/tutorial.html</li>
+        <li>http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html</li>
+        <li>http://thesassway.com/</li>
+        <li>http://compass-style.org/</li>
+    </ul>
+</section>
+
+<section class="slide" id="game-over">
+   <h1 onclick="doubleRainbow();">Game Over</h1>
+   <div class="double-rainbow">
+      <canvas id="double-rainbow-canvas" width="600" height="150"></canvas>
+   </div>
+</section>
+
+<script type="application/javascript">
+   function doubleRainbow() {
+      var canvas = document.getElementById("double-rainbow-canvas");
+      if (canvas.getContext) {
+         var ctx = canvas.getContext("2d");
+         var i, x, y, radius, startAngle, endAngle, clockwise;
+         var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+         // http://www.scienceprimer.com/drawing-circles-javascript-html5-canvas-element
+         for (i = 0; i < colors.length; i += 1) {
+            x = 150;
+            y = 150;
+            radius = 150 - (i * 20);
+            startAngle = 0;
+            endAngle = Math.PI;
+            clockwise = true;
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle, clockwise);
+            ctx.fillStyle = colors[i];
+            ctx.fill();
+            ctx.closePath();
+
+            x = 450;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle, clockwise);
+            ctx.fillStyle = colors[i];
+            ctx.fill();
+            ctx.closePath();
+         }
+      }
+   }
+</script>
+
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+   <span class="deck-status-current"></span>
+   /
+   <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+   <label for="goto-slide">Go to slide:</label>
+   <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+   <datalist id="goto-datalist"></datalist>
+   <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="./deck_js/jquery-1.7.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="./deck_js/core/deck.core.js"></script>
+<script src="./deck_js/extensions/hash/deck.hash.js"></script>
+<script src="./deck_js/extensions/menu/deck.menu.js"></script>
+<script src="./deck_js/extensions/goto/deck.goto.js"></script>
+<script src="./deck_js/extensions/status/deck.status.js"></script>
+<script src="./deck_js/extensions/navigation/deck.navigation.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+   $.deck('.slide');
+});
+</script>
+
+</body>
+</html>
